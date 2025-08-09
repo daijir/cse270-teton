@@ -26,7 +26,7 @@ class TestSmokeTest():
     self.driver.quit()
   
   def test_1Navigatetothehomepage(self):
-    self.driver.get("http://localhost:5500/cse270-teton/teton/1.6/")
+    self.driver.get("http://localhost:5500/teton/1.6/")
     self.driver.set_window_size(785, 822)
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
     assert len(elements) > 0
@@ -35,7 +35,7 @@ class TestSmokeTest():
     assert self.driver.title == "Teton Idaho CoC"
   
   def test_2Navigatetothehomepage(self):
-    self.driver.get("http://localhost:5500/cse270-teton/teton/1.6/")
+    self.driver.get("http://localhost:5500/teton/1.6/")
     self.driver.set_window_size(1550, 830)
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".spotlight1 img")
     assert len(elements) > 0
@@ -46,7 +46,7 @@ class TestSmokeTest():
     self.driver.find_element(By.LINK_TEXT, "Join Us").click()
   
   def test_3Navigatetothedirectorypage(self):
-    self.driver.get("http://localhost:5500/cse270-teton/teton/1.6/directory.html")
+    self.driver.get("http://localhost:5500/teton/1.6/directory.html")
     self.driver.set_window_size(781, 822)
     self.driver.find_element(By.ID, "directory-grid").click()
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
@@ -54,7 +54,7 @@ class TestSmokeTest():
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
   
   def test_4Navigatetothejoinpage(self):
-    self.driver.get("http://localhost:5500/cse270-teton/teton/1.6/join.html")
+    self.driver.get("http://localhost:5500/teton/1.6/join.html")
     self.driver.set_window_size(781, 822)
     elements = self.driver.find_elements(By.NAME, "fname")
     assert len(elements) > 0
@@ -67,7 +67,7 @@ class TestSmokeTest():
     assert len(elements) > 0
   
   def test_5Navigatetotheadminpage(self):
-    self.driver.get("http://localhost:5500/cse270-teton/teton/1.6/admin.html")
+    self.driver.get("http://localhost:5500/teton/1.6/admin.html")
     self.driver.set_window_size(781, 822)
     elements = self.driver.find_elements(By.ID, "username")
     assert len(elements) > 0
